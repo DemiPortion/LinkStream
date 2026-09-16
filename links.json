@@ -1,0 +1,25 @@
+{
+  "profile": {
+    "name": "Marc",
+    "tagline": "Administrateur systèmes & réseaux · Freelance IT",
+    "initials": "MR",
+    "avatar": ""
+  },
+  "links": [
+    {
+      "title": "GitHub",
+      "url": "https://github.com/",
+      "icon": "fa-brands fa-github"
+    },
+    {
+      "title": "LinkedIn",
+      "url": "https://linkedin.com/",
+      "icon": "fa-brands fa-linkedin"
+    },
+    {
+      "title": "Me contacter",
+      "url": "mailto:contact@example.com",
+      "icon": "fa-solid fa-envelope"
+    }
+  ]
+}

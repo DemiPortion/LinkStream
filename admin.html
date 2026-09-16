@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin — Liens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Écran de verrouillage -->
+  <div class="gate" id="gate">
+    <div class="card">
+      <span class="badge" id="gateBadge">Première visite</span>
+      <h1 id="gateTitle">Créer un mot de passe</h1>
+      <p class="lede" id="gateLede">Ce mot de passe protège juste l'accès à cette page dans ce navigateur. Ce n'est pas une vraie sécurité — le code est visible par n'importe qui, donc n'y mets rien de sensible.</p>
+      <div class="field">
+        <label for="pwInput">Mot de passe</label>
+        <input type="password" id="pwInput" autocomplete="off" />
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" id="gateSubmit">Valider</button>
+      </div>
+      <div class="status-msg" id="gateStatus"></div>
+    </div>
+  </div>
+
+  <!-- Panneau admin -->
+  <main class="admin-page" id="adminPanel" style="display:none;">
+    <div class="admin-shell">
+      <h1>Gérer mes liens</h1>
+      <p class="lede">Les changements sont sauvegardés dans ce navigateur. Pour qu'ils apparaissent sur la vraie page publique, exporte le fichier et remplace <code>links.json</code> sur GitHub (détails en bas).</p>
+
+      <div class="card">
+        <h2>Profil</h2>
+        <div class="field">
+          <label for="profName">Nom affiché</label>
+          <input type="text" id="profName" />
+        </div>
+        <div class="field">
+          <label for="profTagline">Sous-titre</label>
+          <input type="text" id="profTagline" />
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="profInitials">Initiales (si pas de photo)</label>
+            <input type="text" id="profInitials" maxlength="3" />
+          </div>
+          <div class="field">
+            <label for="profAvatar">URL d'une photo (optionnel)</label>
+            <input type="text" id="profAvatar" placeholder="https://..." />
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Ajouter un lien</h2>
+        <div class="row">
+          <div class="field">
+            <label for="linkTitle">Titre</label>
+            <input type="text" id="linkTitle" placeholder="Mon portfolio" />
+          </div>
+          <div class="field">
+            <label for="linkIcon">Icône</label>
+            <select id="linkIcon"></select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="linkUrl">Lien (URL)</label>
+          <input type="text" id="linkUrl" placeholder="https://..." />
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-primary" id="addLinkBtn">Ajouter le lien</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Aperçu en direct</h2>
+        <div class="preview-frame">
+          <div class="identity">
+            <div class="avatar-ring"><div class="avatar" id="pvAvatar" style="font-size:20px;">MR</div></div>
+            <h1 id="pvName" style="font-size:19px;"></h1>
+            <p id="pvTagline"></p>
+          </div>
+          <div class="links" id="pvLinks"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Mes liens</h2>
+        <div id="linkList"></div>
+        <p class="hint" id="emptyHint">Aucun lien pour l'instant.</p>
+      </div>
+
+      <div class="card">
+        <h2>Publier les changements</h2>
+        <p class="hint">1. Clique sur <strong>Télécharger links.json</strong>.<br />2. Va sur ton repo GitHub → remplace le fichier <code>links.json</code> par celui-ci.<br />3. Commit. La page publique se met à jour en quelques secondes.</p>
+        <div class="btn-row">
+          <button class="btn btn-primary" id="downloadBtn">Télécharger links.json</button>
+          <button class="btn btn-ghost" id="copyBtn">Copier le JSON</button>
+        </div>
+        <textarea class="export-box" id="exportBox" readonly></textarea>
+      </div>
+
+      <div class="card">
+        <h2>Sécurité</h2>
+        <div class="btn-row">
+          <button class="btn btn-ghost" id="changePwBtn">Changer le mot de passe</button>
+          <button class="btn btn-danger" id="lockBtn">Verrouiller</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
