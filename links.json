@@ -1,25 +1,35 @@
 {
   "profile": {
-    "name": "Marc",
-    "tagline": "Administrateur systèmes & réseaux · Freelance IT",
-    "initials": "MR",
+    "name": "Sharko",
+    "tagline": "Streamer",
+    "initials": "SH",
     "avatar": ""
   },
   "links": [
     {
-      "title": "GitHub",
-      "url": "https://github.com/",
-      "icon": "fa-brands fa-github"
+      "title": "Youtube",
+      "url": "https://www.youtube.com/@sh_rko",
+      "icon": "fa-brands fa-youtube"
     },
     {
-      "title": "LinkedIn",
-      "url": "https://linkedin.com/",
-      "icon": "fa-brands fa-linkedin"
+      "title": "Twitch",
+      "url": "https://www.twitch.tv/sh4rkotv",
+      "icon": "fa-brands fa-twitch"
     },
     {
-      "title": "Me contacter",
-      "url": "mailto:contact@example.com",
-      "icon": "fa-solid fa-envelope"
+      "title": "Discord",
+      "url": "https://discord.gg/fcGTZR5kV",
+      "icon": "fa-brands fa-discord"
+    },
+    {
+      "title": "Don",
+      "url": "https://streamelements.com/sh4rkotv/tip",
+      "icon": "fa-solid fa-globe"
+    },
+    {
+      "title": "Tiktok",
+      "url": "https://www.instagram.com/sh4rko102kg?stkn=MTEwcGxkNGp3em0xbw==",
+      "icon": "fa-brands fa-tiktok"
     }
   ]
 }
